@@ -11,6 +11,7 @@ const form = document.querySelector('.form');
 const darkBtn = document.getElementById('dark-night-btn');
 const dayBtn = document.getElementById('day-night-btn');
 const darkBtnImg = document.getElementById('dark-night-btn-img');
+const signBox = document.querySelectorAll('.sign-box p');
 
 // For local-storage
 const darkLocal = localStorage.getItem('dark');
@@ -48,6 +49,12 @@ function darkMode() {
     dayBtn.style.display = 'block';
     darkBtn.style.display  = 'none';
 
+
+    signBox.forEach((p) => {
+        p.classList.remove('light');
+        p.classList.add('dark');
+    });
+
     dayBtn.classList.remove('light');
     dayBtn.classList.add('dark');
     dayBtn.classList.add('invert');
@@ -55,12 +62,17 @@ function darkMode() {
 function dayMode() {
     localStorage.setItem('dark', null);
 
-    form.classList.add('light');
     form.classList.remove('dark');
+    form.classList.add('light');
 
     darkBtn.style.display = 'block';
     dayBtn.style.display  = 'none';
 
+    signBox.forEach((p) => {
+        p.classList.remove('dark');
+        p.classList.add('light');
+    });
+    
     dayBtn.classList.add('light');
     dayBtn.classList.remove('dark');
     dayBtn.classList.remove('invert');

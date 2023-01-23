@@ -81,21 +81,65 @@ body {
 }
 /* End Styles for the main background */
 
-/* Start style for the header */
+/* Start style for the header and sign-box*/
 .header {
     position: absolute;
     top: 15%;
     right: 0;
     left: 0;
     margin: auto;
-    background: #000000cc;
-    width: 50%; 
+    width: 60%; 
     height: 10%;
-    border-radius: 10px;
+    
 }
+.sign-box {
+    height: 100%;
+    width: 100%;
 
-/* End style for the header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.sign-box p:first-child::after {
+    content: '';
+    width: 4px;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 50%;
+    right: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 100px;
+}
+.sign-box p {
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    text-align: center;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+.sign-box p:first-child {
+    border-top-left-radius:     8px ;
+    border-bottom-left-radius:  8px;
+}
+.sign-box p:last-child {
+    border-top-right-radius:     8px ;
+    border-bottom-right-radius:  8px;
+}
+.sign-box p:hover {
+    background-color: var(--white-color-lighter);
+}
+/* End style for the header and sign-box*/
+
+/* Start style the form container */
 .form {
     position: absolute;
     top: 15%;
@@ -116,7 +160,6 @@ body {
 .form::-webkit-scrollbar {
     display: none;
 }
-
 .form-content h1 {
     font-size: 2.5rem;
     margin: 2rem 0;
@@ -145,7 +188,6 @@ body {
 }
 .form-content .links a:hover {
     background-color: rgba(255, 255, 255, 0.466);
-
 }
 .switch-day-night {
     position: absolute;
@@ -153,7 +195,6 @@ body {
     right: 5%;
     cursor: pointer;
     border-radius: 50%;
-
 }
 .dark .links a {
     color: white;
@@ -200,6 +241,7 @@ body {
 
 
 
+/* End style the form container */
 
 
 
