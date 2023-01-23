@@ -61,7 +61,6 @@ body {
 */
 
 /* Styles for the main background */
-
 .mainbg {
     height: 100%;
     width: 100%;
@@ -74,12 +73,14 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0.85;
-    filter:              grayscale(40%) blur(2px);
-    -webkit-filter:      grayscale(40%) blur(2px);
-    -moz-filter:         grayscale(40%) blur(2px);
-    -o-filter:           grayscale(40%) blur(2px);
-    -ms-filter:          grayscale(40%) blur(2px);
+    filter:              grayscale(40%) blur(1px);
+    -webkit-filter:      grayscale(40%) blur(1px);
+    -moz-filter:         grayscale(40%) blur(1px);
+    -o-filter:           grayscale(40%) blur(1px);
+    -ms-filter:          grayscale(40%) blur(1px);
 }
+/* End Styles for the main background */
+
 .form {
     position: absolute;
     top: 0;
@@ -121,28 +122,24 @@ body {
     justify-content: center;
     align-items: center;
 
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .switch-day-night p:hover {
     width: 1.7rem;
     height: 1.7rem;
     opacity: 1;
+    transform: rotate(720deg);
 }
 .switch-day-night img {
     width: 85%;
     height: 85%;
 
     transition: 0.5s;
-
 }
-/* Add this later in js to the image */
-.rotate {
-    /* transform: rotate(360deg); */
-    /* Fot twice turns 360 * 2 = 720deg */
-    transform: rotate(720deg);
+#day-night-btn img {
+    width: 80%;
+    height: 80%;
 }
-
-
 /* Adding this class later with js to switch!! */
 .invert {
     filter:             invert(1);
